@@ -42,6 +42,9 @@ module masterController(
     manualPulses manualpulses(incMinClock, incHourClock, incMinAlarm, incHourAlarm, displayAlarm, editMode, increase, selected);
     
 	// Setting up the clock and sending pulses to increment counts every 60 s and 1 hour.
+
+
+	
     clk100MHz_5MHz divideTo5MHz(clk5MHz, clk100MHz);
     clockDivider divider(incMinClock, incHourClock, clk2s, clk3Hz, clk500Hz, clk5MHz);
     pulseGenerator generator(pulse1min, pulse1hour, incMinClock, clk5MHz, reset);
